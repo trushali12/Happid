@@ -34,5 +34,7 @@
     <string>This application requires location services</string>
     <key>NSLocationAlwaysUsageDescription</key>
     <string>This application requires location services</string>
+    <key>UIUserInterfaceStyle</key>
+    <string>Light</string>
 </dict>
 </plist>

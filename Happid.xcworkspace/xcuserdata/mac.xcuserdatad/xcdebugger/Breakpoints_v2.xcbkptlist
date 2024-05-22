@@ -151,17 +151,97 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C76DFC73-B2CF-4985-9EDA-0FCE14CC3622"
+            uuid = "0EF673B3-18BE-424F-859D-C0E48491F918"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Happid/LoginScreen/LoginViewController.swift"
+            filePath = "Happid/ProfileScreen/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "validateMobileNumber(value:)"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "APiCalling()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0EF673B3-18BE-424F-859D-C0E48491F918 - 956fcfe510d1fb9a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Happid.ProfileViewController.APiCalling() -&gt; ()"
+                  moduleName = "Happid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Documents/Trushali_Project/GitProject/Happid/Happid/ProfileScreen/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "1124">
+               </Location>
+               <Location
+                  uuid = "0EF673B3-18BE-424F-859D-C0E48491F918 - 956fcfe510d1fb9a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Happid.ProfileViewController.APiCalling() -&gt; ()"
+                  moduleName = "Happid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Documents/Trushali_Project/GitProject/Happid/Happid/ProfileScreen/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "865">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D1A1AF92-D784-41C7-8A81-A8D579A91CE6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Happid/ProfileScreen/ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "APiCalling()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D1A1AF92-D784-41C7-8A81-A8D579A91CE6 - 956fcfe510d1f701"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Happid.ProfileViewController.APiCalling() -&gt; ()"
+                  moduleName = "Happid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Documents/Trushali_Project/GitProject/Happid/Happid/ProfileScreen/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "10040">
+               </Location>
+               <Location
+                  uuid = "D1A1AF92-D784-41C7-8A81-A8D579A91CE6 - 956fcfe510d1f77e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Happid.ProfileViewController.APiCalling() -&gt; ()"
+                  moduleName = "Happid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Documents/Trushali_Project/GitProject/Happid/Happid/ProfileScreen/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "11958">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
