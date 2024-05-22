@@ -1,0 +1,6 @@
+framework module Pods_Happid_HappidUITests {
+  umbrella header "Pods-Happid-HappidUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

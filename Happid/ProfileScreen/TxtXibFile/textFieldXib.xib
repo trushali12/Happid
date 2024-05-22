@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="textFieldXib" customModule="Happid" customModuleProvider="target">
+            <connections>
+                <outlet property="lblTitile" destination="V5S-sf-XcY" id="fWB-rz-API"/>
+                <outlet property="mainView" destination="iN0-l3-epB" id="DXo-zF-WAe"/>
+                <outlet property="txtBgView" destination="hNX-f4-u44" id="qdx-bm-YVQ"/>
+                <outlet property="txtValue" destination="FSU-Qa-sJ1" id="QAj-tl-bUZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="328" height="77"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5S-sf-XcY">
+                    <rect key="frame" x="0.0" y="0.0" width="328" height="17"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
+                    <color key="textColor" name="text_Color"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNX-f4-u44" customClass="SetCornerRadious" customModule="Happid" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="27" width="328" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FSU-Qa-sJ1">
+                            <rect key="frame" x="15" y="0.0" width="298" height="50"/>
+                            <color key="textColor" name="text_Color"/>
+                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96761780980000001" green="0.4996179342" blue="0.36532866949999998" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="FSU-Qa-sJ1" secondAttribute="trailing" constant="15" id="9eb-hi-r7g"/>
+                        <constraint firstAttribute="bottom" secondItem="FSU-Qa-sJ1" secondAttribute="bottom" id="XPN-73-e0L"/>
+                        <constraint firstItem="FSU-Qa-sJ1" firstAttribute="leading" secondItem="hNX-f4-u44" secondAttribute="leading" constant="15" id="XjK-yN-9zS"/>
+                        <constraint firstItem="FSU-Qa-sJ1" firstAttribute="top" secondItem="hNX-f4-u44" secondAttribute="top" id="ceA-nQ-6zC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="hNX-f4-u44" firstAttribute="top" secondItem="V5S-sf-XcY" secondAttribute="bottom" constant="10" id="5zm-N5-z6a"/>
+                <constraint firstItem="V5S-sf-XcY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Kcq-Mx-GTa"/>
+                <constraint firstAttribute="bottom" secondItem="hNX-f4-u44" secondAttribute="bottom" id="Q4m-vc-arE"/>
+                <constraint firstAttribute="trailing" secondItem="hNX-f4-u44" secondAttribute="trailing" id="o7s-mP-iN4"/>
+                <constraint firstItem="V5S-sf-XcY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pgQ-YZ-eWJ"/>
+                <constraint firstAttribute="trailing" secondItem="V5S-sf-XcY" secondAttribute="trailing" id="qL2-v6-GYr"/>
+                <constraint firstItem="hNX-f4-u44" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uhi-x6-9TG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="94" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="text_Color">
+            <color red="0.037000000476837158" green="0.17700000107288361" blue="0.29600000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

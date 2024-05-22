@@ -1,0 +1,929 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		041DFDEC2BFCBFB2005393A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DFDEB2BFCBFB2005393A1 /* AppDelegate.swift */; };
+		041DFDEE2BFCBFB2005393A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DFDED2BFCBFB2005393A1 /* SceneDelegate.swift */; };
+		041DFDF02BFCBFB2005393A1 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DFDEF2BFCBFB2005393A1 /* SplashController.swift */; };
+		041DFDF32BFCBFB2005393A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041DFDF12BFCBFB2005393A1 /* Main.storyboard */; };
+		041DFDF62BFCBFB2005393A1 /* Happid.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 041DFDF42BFCBFB2005393A1 /* Happid.xcdatamodeld */; };
+		041DFDF82BFCBFB4005393A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041DFDF72BFCBFB4005393A1 /* Assets.xcassets */; };
+		041DFDFB2BFCBFB4005393A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041DFDF92BFCBFB4005393A1 /* LaunchScreen.storyboard */; };
+		041DFE062BFCBFB4005393A1 /* HappidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DFE052BFCBFB4005393A1 /* HappidTests.swift */; };
+		041DFE102BFCBFB4005393A1 /* HappidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DFE0F2BFCBFB4005393A1 /* HappidUITests.swift */; };
+		041DFE122BFCBFB4005393A1 /* HappidUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DFE112BFCBFB4005393A1 /* HappidUITestsLaunchTests.swift */; };
+		041DFE232BFCC0C5005393A1 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DFE222BFCC0C5005393A1 /* Global.swift */; };
+		041DFE262BFCC6E9005393A1 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 041DFE252BFCC6E9005393A1 /* Montserrat-Bold.ttf */; };
+		041DFE2E2BFCD34B005393A1 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 041DFE2D2BFCD34B005393A1 /* Montserrat-SemiBold.ttf */; };
+		0451BDDF2BFCE41000E96C9E /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0451BDDE2BFCE41000E96C9E /* Montserrat-ExtraBold.ttf */; };
+		0451BDE12BFCE45300E96C9E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0451BDE02BFCE45300E96C9E /* Montserrat-Medium.ttf */; };
+		0451BDE42BFCE5E300E96C9E /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0451BDE22BFCE5E300E96C9E /* Inter-Medium.ttf */; };
+		0451BDE52BFCE5E300E96C9E /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0451BDE32BFCE5E300E96C9E /* Inter-ExtraBold.ttf */; };
+		0451BDE72BFCEA6800E96C9E /* btnAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451BDE62BFCEA6800E96C9E /* btnAuthentication.swift */; };
+		0451BDEB2BFCEA9C00E96C9E /* btnAuthentication.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0451BDEA2BFCEA9C00E96C9E /* btnAuthentication.xib */; };
+		0454EBF22BFDFCC4007D2CF5 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0454EBF12BFDFCC4007D2CF5 /* extension.swift */; };
+		0454EBF82BFE1136007D2CF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0454EBF72BFE1136007D2CF5 /* LoginViewController.swift */; };
+		046F9C232BFDAB3200BAD591 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F9C222BFDAB3200BAD591 /* ProfileViewController.swift */; };
+		046F9C252BFDB41500BAD591 /* textFieldXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F9C242BFDB41500BAD591 /* textFieldXib.swift */; };
+		046F9C272BFDB41D00BAD591 /* textFieldXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046F9C262BFDB41D00BAD591 /* textFieldXib.xib */; };
+		049AAF992BFD1D2D00BC2827 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049AAF982BFD1D2D00BC2827 /* OTPViewController.swift */; };
+		049AAF9B2BFD250D00BC2827 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049AAF9A2BFD250D00BC2827 /* VerificationViewController.swift */; };
+		1877B3595392087518EA06FB /* Pods_Happid_HappidUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 031E1EDD356C06668CB1EB51 /* Pods_Happid_HappidUITests.framework */; };
+		79ACBD574EDBE405A294853E /* Pods_Happid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FB23FE0576675FCED7648B /* Pods_Happid.framework */; };
+		EF62835905A185C5226DC7B1 /* Pods_HappidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16AB624DEAC3F75A8F9B430C /* Pods_HappidTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		041DFE022BFCBFB4005393A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 041DFDE02BFCBFB2005393A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 041DFDE72BFCBFB2005393A1;
+			remoteInfo = Happid;
+		};
+		041DFE0C2BFCBFB4005393A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 041DFDE02BFCBFB2005393A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 041DFDE72BFCBFB2005393A1;
+			remoteInfo = Happid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		031E1EDD356C06668CB1EB51 /* Pods_Happid_HappidUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happid_HappidUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		041DFDE82BFCBFB2005393A1 /* Happid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		041DFDEB2BFCBFB2005393A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		041DFDED2BFCBFB2005393A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		041DFDEF2BFCBFB2005393A1 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
+		041DFDF22BFCBFB2005393A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		041DFDF52BFCBFB2005393A1 /* Happid.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Happid.xcdatamodel; sourceTree = "<group>"; };
+		041DFDF72BFCBFB4005393A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		041DFDFA2BFCBFB4005393A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		041DFDFC2BFCBFB4005393A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		041DFE012BFCBFB4005393A1 /* HappidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		041DFE052BFCBFB4005393A1 /* HappidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappidTests.swift; sourceTree = "<group>"; };
+		041DFE0B2BFCBFB4005393A1 /* HappidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		041DFE0F2BFCBFB4005393A1 /* HappidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappidUITests.swift; sourceTree = "<group>"; };
+		041DFE112BFCBFB4005393A1 /* HappidUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappidUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		041DFE222BFCC0C5005393A1 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		041DFE252BFCC6E9005393A1 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		041DFE2D2BFCD34B005393A1 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		0451BDDE2BFCE41000E96C9E /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		0451BDE02BFCE45300E96C9E /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		0451BDE22BFCE5E300E96C9E /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		0451BDE32BFCE5E300E96C9E /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		0451BDE62BFCEA6800E96C9E /* btnAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = btnAuthentication.swift; sourceTree = "<group>"; };
+		0451BDEA2BFCEA9C00E96C9E /* btnAuthentication.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = btnAuthentication.xib; sourceTree = "<group>"; };
+		0454EBF12BFDFCC4007D2CF5 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		0454EBF72BFE1136007D2CF5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		046F9C222BFDAB3200BAD591 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		046F9C242BFDB41500BAD591 /* textFieldXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldXib.swift; sourceTree = "<group>"; };
+		046F9C262BFDB41D00BAD591 /* textFieldXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = textFieldXib.xib; sourceTree = "<group>"; };
+		049AAF982BFD1D2D00BC2827 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		049AAF9A2BFD250D00BC2827 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		16AB624DEAC3F75A8F9B430C /* Pods_HappidTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappidTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		253FF5902331123EA7D355BF /* Pods-Happid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happid.debug.xcconfig"; path = "Target Support Files/Pods-Happid/Pods-Happid.debug.xcconfig"; sourceTree = "<group>"; };
+		38FB23FE0576675FCED7648B /* Pods_Happid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A58272A98CFBD1C6C39DE36 /* Pods-Happid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happid.release.xcconfig"; path = "Target Support Files/Pods-Happid/Pods-Happid.release.xcconfig"; sourceTree = "<group>"; };
+		56B4533F975D1FBA3007D2EA /* Pods-HappidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappidTests.release.xcconfig"; path = "Target Support Files/Pods-HappidTests/Pods-HappidTests.release.xcconfig"; sourceTree = "<group>"; };
+		64C124F1139EDE0E1AAC6035 /* Pods-HappidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappidTests.debug.xcconfig"; path = "Target Support Files/Pods-HappidTests/Pods-HappidTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7600F9592CFD333BA97DA90A /* Pods-Happid-HappidUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happid-HappidUITests.release.xcconfig"; path = "Target Support Files/Pods-Happid-HappidUITests/Pods-Happid-HappidUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AED5DCC65B94398ACF61B06F /* Pods-Happid-HappidUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happid-HappidUITests.debug.xcconfig"; path = "Target Support Files/Pods-Happid-HappidUITests/Pods-Happid-HappidUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		041DFDE52BFCBFB2005393A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79ACBD574EDBE405A294853E /* Pods_Happid.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041DFDFE2BFCBFB4005393A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF62835905A185C5226DC7B1 /* Pods_HappidTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041DFE082BFCBFB4005393A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1877B3595392087518EA06FB /* Pods_Happid_HappidUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		041DFDDF2BFCBFB2005393A1 = {
+			isa = PBXGroup;
+			children = (
+				041DFDEA2BFCBFB2005393A1 /* Happid */,
+				041DFE042BFCBFB4005393A1 /* HappidTests */,
+				041DFE0E2BFCBFB4005393A1 /* HappidUITests */,
+				041DFDE92BFCBFB2005393A1 /* Products */,
+				D254B76487D2FFBE84B2D039 /* Pods */,
+				C750104E53E52580AFBCEBC3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		041DFDE92BFCBFB2005393A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				041DFDE82BFCBFB2005393A1 /* Happid.app */,
+				041DFE012BFCBFB4005393A1 /* HappidTests.xctest */,
+				041DFE0B2BFCBFB4005393A1 /* HappidUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		041DFDEA2BFCBFB2005393A1 /* Happid */ = {
+			isa = PBXGroup;
+			children = (
+				041DFE242BFCC6DA005393A1 /* Fonts */,
+				041DFE212BFCC0A7005393A1 /* HelperFile */,
+				0454EBF52BFE10B1007D2CF5 /* SplashScreen */,
+				0454EBF62BFE10D0007D2CF5 /* LoginScreen */,
+				0454EBF92BFE1144007D2CF5 /* OtpScreen */,
+				0454EBFA2BFE1154007D2CF5 /* VerificationScreen */,
+				0454EBFB2BFE1162007D2CF5 /* ProfileScreen */,
+				041DFE202BFCBFF4005393A1 /* Xib */,
+				041DFE1E2BFCBFC9005393A1 /* Delegate */,
+				041DFDF12BFCBFB2005393A1 /* Main.storyboard */,
+				041DFDF72BFCBFB4005393A1 /* Assets.xcassets */,
+				041DFDF92BFCBFB4005393A1 /* LaunchScreen.storyboard */,
+				041DFDFC2BFCBFB4005393A1 /* Info.plist */,
+				041DFDF42BFCBFB2005393A1 /* Happid.xcdatamodeld */,
+			);
+			path = Happid;
+			sourceTree = "<group>";
+		};
+		041DFE042BFCBFB4005393A1 /* HappidTests */ = {
+			isa = PBXGroup;
+			children = (
+				041DFE052BFCBFB4005393A1 /* HappidTests.swift */,
+			);
+			path = HappidTests;
+			sourceTree = "<group>";
+		};
+		041DFE0E2BFCBFB4005393A1 /* HappidUITests */ = {
+			isa = PBXGroup;
+			children = (
+				041DFE0F2BFCBFB4005393A1 /* HappidUITests.swift */,
+				041DFE112BFCBFB4005393A1 /* HappidUITestsLaunchTests.swift */,
+			);
+			path = HappidUITests;
+			sourceTree = "<group>";
+		};
+		041DFE1E2BFCBFC9005393A1 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				041DFDEB2BFCBFB2005393A1 /* AppDelegate.swift */,
+				041DFDED2BFCBFB2005393A1 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		041DFE202BFCBFF4005393A1 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				0451BDE62BFCEA6800E96C9E /* btnAuthentication.swift */,
+				0451BDEA2BFCEA9C00E96C9E /* btnAuthentication.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		041DFE212BFCC0A7005393A1 /* HelperFile */ = {
+			isa = PBXGroup;
+			children = (
+				041DFE222BFCC0C5005393A1 /* Global.swift */,
+				0454EBF12BFDFCC4007D2CF5 /* extension.swift */,
+			);
+			path = HelperFile;
+			sourceTree = "<group>";
+		};
+		041DFE242BFCC6DA005393A1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0451BDE32BFCE5E300E96C9E /* Inter-ExtraBold.ttf */,
+				0451BDE22BFCE5E300E96C9E /* Inter-Medium.ttf */,
+				0451BDE02BFCE45300E96C9E /* Montserrat-Medium.ttf */,
+				0451BDDE2BFCE41000E96C9E /* Montserrat-ExtraBold.ttf */,
+				041DFE2D2BFCD34B005393A1 /* Montserrat-SemiBold.ttf */,
+				041DFE252BFCC6E9005393A1 /* Montserrat-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0454EBF52BFE10B1007D2CF5 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				041DFDEF2BFCBFB2005393A1 /* SplashController.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		0454EBF62BFE10D0007D2CF5 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0454EBF72BFE1136007D2CF5 /* LoginViewController.swift */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		0454EBF92BFE1144007D2CF5 /* OtpScreen */ = {
+			isa = PBXGroup;
+			children = (
+				049AAF982BFD1D2D00BC2827 /* OTPViewController.swift */,
+			);
+			path = OtpScreen;
+			sourceTree = "<group>";
+		};
+		0454EBFA2BFE1154007D2CF5 /* VerificationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				049AAF9A2BFD250D00BC2827 /* VerificationViewController.swift */,
+			);
+			path = VerificationScreen;
+			sourceTree = "<group>";
+		};
+		0454EBFB2BFE1162007D2CF5 /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0454EBFC2BFE1192007D2CF5 /* TxtXibFile */,
+				046F9C222BFDAB3200BAD591 /* ProfileViewController.swift */,
+			);
+			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		0454EBFC2BFE1192007D2CF5 /* TxtXibFile */ = {
+			isa = PBXGroup;
+			children = (
+				046F9C242BFDB41500BAD591 /* textFieldXib.swift */,
+				046F9C262BFDB41D00BAD591 /* textFieldXib.xib */,
+			);
+			path = TxtXibFile;
+			sourceTree = "<group>";
+		};
+		C750104E53E52580AFBCEBC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38FB23FE0576675FCED7648B /* Pods_Happid.framework */,
+				031E1EDD356C06668CB1EB51 /* Pods_Happid_HappidUITests.framework */,
+				16AB624DEAC3F75A8F9B430C /* Pods_HappidTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D254B76487D2FFBE84B2D039 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				253FF5902331123EA7D355BF /* Pods-Happid.debug.xcconfig */,
+				4A58272A98CFBD1C6C39DE36 /* Pods-Happid.release.xcconfig */,
+				AED5DCC65B94398ACF61B06F /* Pods-Happid-HappidUITests.debug.xcconfig */,
+				7600F9592CFD333BA97DA90A /* Pods-Happid-HappidUITests.release.xcconfig */,
+				64C124F1139EDE0E1AAC6035 /* Pods-HappidTests.debug.xcconfig */,
+				56B4533F975D1FBA3007D2EA /* Pods-HappidTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		041DFDE72BFCBFB2005393A1 /* Happid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 041DFE152BFCBFB4005393A1 /* Build configuration list for PBXNativeTarget "Happid" */;
+			buildPhases = (
+				C260903E8B668DCA3780B407 /* [CP] Check Pods Manifest.lock */,
+				041DFDE42BFCBFB2005393A1 /* Sources */,
+				041DFDE52BFCBFB2005393A1 /* Frameworks */,
+				041DFDE62BFCBFB2005393A1 /* Resources */,
+				1BACE63BA3A7525F3BC6731C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Happid;
+			productName = Happid;
+			productReference = 041DFDE82BFCBFB2005393A1 /* Happid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		041DFE002BFCBFB4005393A1 /* HappidTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 041DFE182BFCBFB4005393A1 /* Build configuration list for PBXNativeTarget "HappidTests" */;
+			buildPhases = (
+				DE1C91EBF1344BAB32C18582 /* [CP] Check Pods Manifest.lock */,
+				041DFDFD2BFCBFB4005393A1 /* Sources */,
+				041DFDFE2BFCBFB4005393A1 /* Frameworks */,
+				041DFDFF2BFCBFB4005393A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				041DFE032BFCBFB4005393A1 /* PBXTargetDependency */,
+			);
+			name = HappidTests;
+			productName = HappidTests;
+			productReference = 041DFE012BFCBFB4005393A1 /* HappidTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		041DFE0A2BFCBFB4005393A1 /* HappidUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 041DFE1B2BFCBFB4005393A1 /* Build configuration list for PBXNativeTarget "HappidUITests" */;
+			buildPhases = (
+				468B5FD394F6627034231FB9 /* [CP] Check Pods Manifest.lock */,
+				041DFE072BFCBFB4005393A1 /* Sources */,
+				041DFE082BFCBFB4005393A1 /* Frameworks */,
+				041DFE092BFCBFB4005393A1 /* Resources */,
+				97C4A3139FC83CF2C71E2EDF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				041DFE0D2BFCBFB4005393A1 /* PBXTargetDependency */,
+			);
+			name = HappidUITests;
+			productName = HappidUITests;
+			productReference = 041DFE0B2BFCBFB4005393A1 /* HappidUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		041DFDE02BFCBFB2005393A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					041DFDE72BFCBFB2005393A1 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					041DFE002BFCBFB4005393A1 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 041DFDE72BFCBFB2005393A1;
+					};
+					041DFE0A2BFCBFB4005393A1 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 041DFDE72BFCBFB2005393A1;
+					};
+				};
+			};
+			buildConfigurationList = 041DFDE32BFCBFB2005393A1 /* Build configuration list for PBXProject "Happid" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 041DFDDF2BFCBFB2005393A1;
+			productRefGroup = 041DFDE92BFCBFB2005393A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				041DFDE72BFCBFB2005393A1 /* Happid */,
+				041DFE002BFCBFB4005393A1 /* HappidTests */,
+				041DFE0A2BFCBFB4005393A1 /* HappidUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		041DFDE62BFCBFB2005393A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041DFE2E2BFCD34B005393A1 /* Montserrat-SemiBold.ttf in Resources */,
+				041DFE262BFCC6E9005393A1 /* Montserrat-Bold.ttf in Resources */,
+				041DFDFB2BFCBFB4005393A1 /* LaunchScreen.storyboard in Resources */,
+				041DFDF82BFCBFB4005393A1 /* Assets.xcassets in Resources */,
+				0451BDEB2BFCEA9C00E96C9E /* btnAuthentication.xib in Resources */,
+				046F9C272BFDB41D00BAD591 /* textFieldXib.xib in Resources */,
+				041DFDF32BFCBFB2005393A1 /* Main.storyboard in Resources */,
+				0451BDE52BFCE5E300E96C9E /* Inter-ExtraBold.ttf in Resources */,
+				0451BDDF2BFCE41000E96C9E /* Montserrat-ExtraBold.ttf in Resources */,
+				0451BDE12BFCE45300E96C9E /* Montserrat-Medium.ttf in Resources */,
+				0451BDE42BFCE5E300E96C9E /* Inter-Medium.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041DFDFF2BFCBFB4005393A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041DFE092BFCBFB4005393A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BACE63BA3A7525F3BC6731C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Happid/Pods-Happid-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Happid/Pods-Happid-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Happid/Pods-Happid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		468B5FD394F6627034231FB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Happid-HappidUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97C4A3139FC83CF2C71E2EDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Happid-HappidUITests/Pods-Happid-HappidUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Happid-HappidUITests/Pods-Happid-HappidUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Happid-HappidUITests/Pods-Happid-HappidUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C260903E8B668DCA3780B407 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Happid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE1C91EBF1344BAB32C18582 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HappidTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		041DFDE42BFCBFB2005393A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0454EBF82BFE1136007D2CF5 /* LoginViewController.swift in Sources */,
+				041DFDF02BFCBFB2005393A1 /* SplashController.swift in Sources */,
+				046F9C232BFDAB3200BAD591 /* ProfileViewController.swift in Sources */,
+				041DFDF62BFCBFB2005393A1 /* Happid.xcdatamodeld in Sources */,
+				041DFE232BFCC0C5005393A1 /* Global.swift in Sources */,
+				049AAF992BFD1D2D00BC2827 /* OTPViewController.swift in Sources */,
+				041DFDEC2BFCBFB2005393A1 /* AppDelegate.swift in Sources */,
+				0454EBF22BFDFCC4007D2CF5 /* extension.swift in Sources */,
+				049AAF9B2BFD250D00BC2827 /* VerificationViewController.swift in Sources */,
+				0451BDE72BFCEA6800E96C9E /* btnAuthentication.swift in Sources */,
+				041DFDEE2BFCBFB2005393A1 /* SceneDelegate.swift in Sources */,
+				046F9C252BFDB41500BAD591 /* textFieldXib.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041DFDFD2BFCBFB4005393A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041DFE062BFCBFB4005393A1 /* HappidTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041DFE072BFCBFB4005393A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041DFE122BFCBFB4005393A1 /* HappidUITestsLaunchTests.swift in Sources */,
+				041DFE102BFCBFB4005393A1 /* HappidUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		041DFE032BFCBFB4005393A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 041DFDE72BFCBFB2005393A1 /* Happid */;
+			targetProxy = 041DFE022BFCBFB4005393A1 /* PBXContainerItemProxy */;
+		};
+		041DFE0D2BFCBFB4005393A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 041DFDE72BFCBFB2005393A1 /* Happid */;
+			targetProxy = 041DFE0C2BFCBFB4005393A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		041DFDF12BFCBFB2005393A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				041DFDF22BFCBFB2005393A1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		041DFDF92BFCBFB4005393A1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				041DFDFA2BFCBFB4005393A1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		041DFE132BFCBFB4005393A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		041DFE142BFCBFB4005393A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		041DFE162BFCBFB4005393A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 253FF5902331123EA7D355BF /* Pods-Happid.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8354Q6UK72;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Happid/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Happid.task.com.Happid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		041DFE172BFCBFB4005393A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A58272A98CFBD1C6C39DE36 /* Pods-Happid.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8354Q6UK72;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Happid/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Happid.task.com.Happid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		041DFE192BFCBFB4005393A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64C124F1139EDE0E1AAC6035 /* Pods-HappidTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8354Q6UK72;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Happid.task.com.HappidTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Happid.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Happid";
+			};
+			name = Debug;
+		};
+		041DFE1A2BFCBFB4005393A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56B4533F975D1FBA3007D2EA /* Pods-HappidTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8354Q6UK72;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Happid.task.com.HappidTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Happid.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Happid";
+			};
+			name = Release;
+		};
+		041DFE1C2BFCBFB4005393A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AED5DCC65B94398ACF61B06F /* Pods-Happid-HappidUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8354Q6UK72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Happid.task.com.HappidUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Happid;
+			};
+			name = Debug;
+		};
+		041DFE1D2BFCBFB4005393A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7600F9592CFD333BA97DA90A /* Pods-Happid-HappidUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8354Q6UK72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Happid.task.com.HappidUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Happid;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		041DFDE32BFCBFB2005393A1 /* Build configuration list for PBXProject "Happid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041DFE132BFCBFB4005393A1 /* Debug */,
+				041DFE142BFCBFB4005393A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		041DFE152BFCBFB4005393A1 /* Build configuration list for PBXNativeTarget "Happid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041DFE162BFCBFB4005393A1 /* Debug */,
+				041DFE172BFCBFB4005393A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		041DFE182BFCBFB4005393A1 /* Build configuration list for PBXNativeTarget "HappidTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041DFE192BFCBFB4005393A1 /* Debug */,
+				041DFE1A2BFCBFB4005393A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		041DFE1B2BFCBFB4005393A1 /* Build configuration list for PBXNativeTarget "HappidUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041DFE1C2BFCBFB4005393A1 /* Debug */,
+				041DFE1D2BFCBFB4005393A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		041DFDF42BFCBFB2005393A1 /* Happid.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				041DFDF52BFCBFB2005393A1 /* Happid.xcdatamodel */,
+			);
+			currentVersion = 041DFDF52BFCBFB2005393A1 /* Happid.xcdatamodel */;
+			path = Happid.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 041DFDE02BFCBFB2005393A1 /* Project object */;
+}
