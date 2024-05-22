@@ -41,6 +41,7 @@ class LoginViewController: UIViewController {
     
     func setupData(){
         txtPhoneNumber.keyboardType = .phonePad
+        txtPhoneNumber.becomeFirstResponder()
         btnRequestOtpView.setTitle(titleVal: "Request OTP")
         btnRequestOtpView.actionBtn.addTarget(self, action: #selector(btnGetStarted), for: .touchUpInside)
         

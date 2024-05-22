@@ -41,6 +41,7 @@ class VerificationViewController: UIViewController {
     
     func setData(){
         btnSubmitView.setTitle(titleVal: "Submit")
+        txt1.becomeFirstResponder()
         btnSubmitView.actionBtn.addTarget(self, action: #selector(btnGetStarted), for: .touchUpInside)
         txt1.delegate = self
         txt2.delegate = self
