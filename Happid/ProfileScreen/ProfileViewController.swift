@@ -92,7 +92,7 @@ class ProfileViewController: UIViewController {
     
     
     func APiCalling(){ // multi part formdata
-        let url = URL(string: "https://yourserver.com/upload")!
+        let url = URL(string: "https://www.google.com/search/")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         let boundary = "Boundary-\(UUID().uuidString)"
