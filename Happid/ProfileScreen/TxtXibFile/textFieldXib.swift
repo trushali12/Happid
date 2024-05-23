@@ -32,6 +32,7 @@ class textFieldXib: UIView {
         mainView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         self.addSubview(mainView)
         mainView.layer.cornerRadius = 5
+        txtValue.returnKeyType = .next
 //        mainView.backgroundColor = UIColor(hex: "#5046BB")
     }
 }

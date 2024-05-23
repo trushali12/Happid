@@ -8,7 +8,7 @@
 import UIKit
 import CoreLocation
 import MapKit
-
+import IQKeyboardManagerSwift
 
 class ProfileViewController: UIViewController {
 
@@ -165,6 +165,9 @@ class ProfileViewController: UIViewController {
         txtFirstNameView.lblTitile.text = "First name"
         txtLastNameView.lblTitile.text = "Last Name"
         txtPhoneNumberView.lblTitile.text = "Phone"
+        txtFirstNameView.txtValue.delegate = self
+        txtLastNameView.txtValue.delegate = self
+        txtPostCode.delegate = self
         txtPhoneNumberView.txtBgView.layer.borderColor = UIColor.orangeThemeColor.cgColor
         txtPhoneNumberView.txtBgView.layer.borderWidth = 1
     }
@@ -208,9 +211,9 @@ extension ProfileViewController: MKMapViewDelegate, CLLocationManagerDelegate {
         self.currentLat = self.mMapView.centerCoordinate.latitude
         self.currentLong = self.mMapView.centerCoordinate.longitude
         self.lblCurrentLocation.text = self.setUsersClosestLocation(mLattitude: self.mMapView.centerCoordinate.latitude, mLongitude: self.mMapView.centerCoordinate.longitude)
-        mMapView.isHidden = true
-        btnMapClose.isHidden = true
-        self.navigationController?.navigationBar.isHidden = false
+//        mMapView.isHidden = true
+//        btnMapClose.isHidden = true
+//        self.navigationController?.navigationBar.isHidden = false
     }
     
     @objc func handleTap(gestureRecognizer: UITapGestureRecognizer) {
@@ -229,16 +232,18 @@ extension ProfileViewController: MKMapViewDelegate, CLLocationManagerDelegate {
         mMapView.addAnnotation(annotation)
         self.currentLat = self.mMapView.centerCoordinate.latitude
         self.currentLong = self.mMapView.centerCoordinate.longitude
-
-        let alert = UIAlertController(title: "Alert", message: "You want select this location?", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { alert in
-            self.mMapView.isHidden = true
-            self.btnMapClose.isHidden = true
-            self.navigationController?.navigationBar.isHidden = false
-            self.lblCurrentLocation.text = self.setUsersClosestLocation(mLattitude: self.mMapView.centerCoordinate.latitude, mLongitude: self.mMapView.centerCoordinate.longitude)
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        self.lblCurrentLocation.text = self.setUsersClosestLocation(mLattitude: self.mMapView.centerCoordinate.latitude, mLongitude: self.mMapView.centerCoordinate.longitude)
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Alert", message: "You want select this location?", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { alert in
+                self.mMapView.isHidden = true
+                self.btnMapClose.isHidden = true
+                self.navigationController?.navigationBar.isHidden = false
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
     
     func setUsersClosestLocation(mLattitude: CLLocationDegrees, mLongitude: CLLocationDegrees) -> String {
@@ -365,4 +370,33 @@ extension ProfileViewController : UIImagePickerControllerDelegate, UINavigationC
         picker.isNavigationBarHidden = false
         self.dismiss(animated: true, completion: nil)
     }
+}
+extension ProfileViewController : UITextFieldDelegate{
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == txtFirstNameView.txtValue {
+            IQKeyboardManager.shared.enableAutoToolbar = false
+        } else if textField == txtLastNameView.txtValue {
+            IQKeyboardManager.shared.enableAutoToolbar = false
+        } else if textField == txtPostCode {
+            IQKeyboardManager.shared.enableAutoToolbar = true
+        } else {
+            IQKeyboardManager.shared.enableAutoToolbar = true
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == txtFirstNameView.txtValue {
+            txtLastNameView.txtValue.becomeFirstResponder()
+        } else if textField == txtLastNameView.txtValue {
+            txtPostCode.becomeFirstResponder()
+        } else if textField == txtPostCode {
+            txtPostCode.resignFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
 }

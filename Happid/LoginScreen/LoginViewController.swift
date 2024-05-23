@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        txtPhoneNumber.becomeFirstResponder()
+//        txtPhoneNumber.becomeFirstResponder()
     }
     
     

@@ -41,7 +41,7 @@
                             <rect key="frame" x="15" y="0.0" width="298" height="50"/>
                             <color key="textColor" name="text_Color"/>
                             <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" red="0.96761780980000001" green="0.4996179342" blue="0.36532866949999998" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
