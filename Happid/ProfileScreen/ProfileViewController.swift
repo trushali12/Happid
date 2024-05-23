@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import CoreLocation
-import MapKit
 
 
 class ProfileViewController: UIViewController {
@@ -23,13 +21,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var btnSubmitView: btnAuthentication!
     var imagePicker = UIImagePickerController()
     var phonumber : String = ""
-    var locationManager: CLLocationManager!
     
-    var mapView : MKMapView = {
-        let map = MKMapView()
-        map.overrideUserInterfaceStyle = .dark
-        return map
-    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
@@ -145,18 +137,6 @@ class ProfileViewController: UIViewController {
     }
     func setUpUI(){
         imagePicker.delegate = self
-        mapView.frame = self.view.frame
-        DispatchQueue.global().async { [self] in
-            if (CLLocationManager.locationServicesEnabled()){
-                mapView.delegate = self
-                mapView.showsUserLocation = true
-                locationManager = CLLocationManager()
-                locationManager.delegate = self
-                locationManager.desiredAccuracy = kCLLocationAccuracyBest
-                locationManager.requestAlwaysAuthorization()
-                locationManager.startUpdatingLocation()
-            }
-        }
         txtPhoneNumberView.txtValue.text = phonumber
         txtPhoneNumberView.txtValue.isEnabled = false
         btnSubmitView.setTitle(titleVal: "Submit")
@@ -173,29 +153,10 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func selectLocation(_ sender: UIButton) {
-        self.view.addSubview(mapView)
-        view.bringSubviewToFront(mapView)
+       
     }
     
 }
-
-
-extension ProfileViewController : CLLocationManagerDelegate,MKMapViewDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last{
-            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-            self.mapView.setRegion(region, animated: true)
-        }
-    }
-    
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print(mapView.region)
-    }
-    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        print(mapView.region)
-    }
-    }
 
 extension ProfileViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
         
