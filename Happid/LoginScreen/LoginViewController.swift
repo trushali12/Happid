@@ -35,13 +35,12 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        txtPhoneNumber.becomeFirstResponder()
     }
     
     
     func setupData(){
         txtPhoneNumber.keyboardType = .phonePad
-        txtPhoneNumber.becomeFirstResponder()
         btnRequestOtpView.setTitle(titleVal: "Request OTP")
         btnRequestOtpView.actionBtn.addTarget(self, action: #selector(btnGetStarted), for: .touchUpInside)
         txtPhoneNumber.delegate = self

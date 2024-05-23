@@ -30,6 +30,7 @@ class ProfileViewController: UIViewController {
     let manager = CLLocationManager()
     var currentLat : Double = 0.0
     var currentLong : Double = 0.0
+    @IBOutlet weak var btnMapClose: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -174,11 +175,13 @@ class ProfileViewController: UIViewController {
     
     @IBAction func selectLocation(_ sender: UIButton) {
         mMapView.isHidden = false
+        btnMapClose.isHidden = false
         self.navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func btnCloseMapView(_ sender: Any) {
         mMapView.isHidden = true
+        btnMapClose.isHidden = true
         self.navigationController?.navigationBar.isHidden = false
     }
     
@@ -206,6 +209,7 @@ extension ProfileViewController: MKMapViewDelegate, CLLocationManagerDelegate {
         self.currentLong = self.mMapView.centerCoordinate.longitude
         self.lblCurrentLocation.text = self.setUsersClosestLocation(mLattitude: self.mMapView.centerCoordinate.latitude, mLongitude: self.mMapView.centerCoordinate.longitude)
         mMapView.isHidden = true
+        btnMapClose.isHidden = true
         self.navigationController?.navigationBar.isHidden = false
     }
     
@@ -229,10 +233,11 @@ extension ProfileViewController: MKMapViewDelegate, CLLocationManagerDelegate {
         let alert = UIAlertController(title: "Alert", message: "You want select this location?", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { alert in
             self.mMapView.isHidden = true
+            self.btnMapClose.isHidden = true
             self.navigationController?.navigationBar.isHidden = false
             self.lblCurrentLocation.text = self.setUsersClosestLocation(mLattitude: self.mMapView.centerCoordinate.latitude, mLongitude: self.mMapView.centerCoordinate.longitude)
         }))
-        alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     

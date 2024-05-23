@@ -1294,7 +1294,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBJ-HJ-C9d">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBJ-HJ-C9d">
                                 <rect key="frame" x="335" y="50" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Nfi-7f-rMp"/>
@@ -1324,6 +1324,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnMapClose" destination="vBJ-HJ-C9d" id="zWT-AP-A3E"/>
                         <outlet property="btnSubmitView" destination="hXV-HZ-E35" id="xAA-sM-Y0d"/>
                         <outlet property="imgProfile" destination="MQf-LR-ihg" id="MUz-oW-pno"/>
                         <outlet property="lblCurrentLocation" destination="9wW-ek-HW3" id="6ek-Xs-NcH"/>

@@ -37,11 +37,14 @@ class VerificationViewController: UIViewController {
         mainView.setGradientBackground(colorTop: UIColor.gradientOne, colorBottom: UIColor.gradientTwo)
     }
     
-   
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        txt1.becomeFirstResponder()
+    }
     
     func setData(){
         btnSubmitView.setTitle(titleVal: "Submit")
-        txt1.becomeFirstResponder()
+        
         btnSubmitView.actionBtn.addTarget(self, action: #selector(btnGetStarted), for: .touchUpInside)
         txt1.delegate = self
         txt2.delegate = self
