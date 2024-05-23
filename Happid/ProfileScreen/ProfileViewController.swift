@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var mMapView: MKMapView!
     @IBOutlet var mainGradientView: UIView!
     @IBOutlet weak var mainProfileView: UIView!
     @IBOutlet weak var imgProfile: UIImageView!
@@ -19,8 +22,14 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var picLocationView: SetCornerRadious!
     @IBOutlet weak var txtPostCode: UITextField!
     @IBOutlet weak var btnSubmitView: btnAuthentication!
+    @IBOutlet weak var lblCurrentLocation: UILabel!
     var imagePicker = UIImagePickerController()
     var phonumber : String = ""
+    var locationManager:CLLocationManager!
+    var currentLocationStr = "Current location"
+    let manager = CLLocationManager()
+    var currentLat : Double = 0.0
+    var currentLong : Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +38,10 @@ class ProfileViewController: UIViewController {
     }
     
 
+    override func viewDidAppear(_ animated: Bool) {
+        determineCurrentLocation()
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         mainGradientView.setGradientBackground(colorTop: UIColor.gradientOne, colorBottom: UIColor.gradientTwo)
@@ -70,6 +83,9 @@ class ProfileViewController: UIViewController {
                 URLQueryItem(name: "lastName", value: "\(txtLastNameView.txtValue.text ?? "")"),
                 URLQueryItem(name: "phoneNumber", value: "\(txtPhoneNumberView.txtValue.text ?? "")"),
                 URLQueryItem(name: "postCode", value: "\(txtPostCode.text ?? "")"),
+                URLQueryItem(name: "currentLat", value: "\(self.currentLat)"),
+                URLQueryItem(name: "currentLong", value: "\(self.currentLong)")
+
             ]
             if let url = components.url {
                print(url)
@@ -104,7 +120,7 @@ class ProfileViewController: UIViewController {
         body.append("\r\n".data(using: .utf8)!)
 
         // Add additional parameters
-        let parameters = ["userId": "0", "firstName": "\(txtFirstNameView.txtValue.text ?? "")", "lastName": "\(txtLastNameView.txtValue.text ?? "")", "phoneNumber": "\(txtPhoneNumberView.txtValue.text ?? "")", "postCode": "\(txtPostCode.text ?? "")"]
+        let parameters = ["userId": "0", "firstName": "\(txtFirstNameView.txtValue.text ?? "")", "lastName": "\(txtLastNameView.txtValue.text ?? "")", "phoneNumber": "\(txtPhoneNumberView.txtValue.text ?? "")", "postCode": "\(txtPostCode.text ?? "")","currentLat":"\(currentLat)", "currentLong":"\(currentLong)"]
         for (key, value) in parameters {
             body.append("--\(boundary)\r\n".data(using: .utf8)!)
             body.append("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n".data(using: .utf8)!)
@@ -136,6 +152,10 @@ class ProfileViewController: UIViewController {
         task.resume()
     }
     func setUpUI(){
+        locationAuthorization()
+        mMapView.showsUserLocation = true
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleTap(gestureRecognizer:)))
+        mMapView.addGestureRecognizer(longPressGesture)
         imagePicker.delegate = self
         txtPhoneNumberView.txtValue.text = phonumber
         txtPhoneNumberView.txtValue.isEnabled = false
@@ -153,7 +173,124 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func selectLocation(_ sender: UIButton) {
-       
+        mMapView.isHidden = false
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    @IBAction func btnCloseMapView(_ sender: Any) {
+        mMapView.isHidden = true
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    
+    deinit{
+        print("ProfileViewController deinit")
+    }
+}
+
+
+extension ProfileViewController: MKMapViewDelegate, CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let mUserLocation:CLLocation = locations[0] as CLLocation
+        let center = CLLocationCoordinate2D(latitude: mUserLocation.coordinate.latitude, longitude: mUserLocation.coordinate.longitude)
+        let mRegion = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        
+        mMapView.setRegion(mRegion, animated: true)
+        // Get user's Current Location and Drop a pin
+        mMapView.removeAnnotations(mMapView.annotations)
+        let mkAnnotation: MKPointAnnotation = MKPointAnnotation()
+        mkAnnotation.coordinate = CLLocationCoordinate2DMake(mUserLocation.coordinate.latitude, mUserLocation.coordinate.longitude)
+        mkAnnotation.title = self.setUsersClosestLocation(mLattitude: mUserLocation.coordinate.latitude, mLongitude: mUserLocation.coordinate.longitude)
+        mMapView.addAnnotation(mkAnnotation)
+        self.currentLat = self.mMapView.centerCoordinate.latitude
+        self.currentLong = self.mMapView.centerCoordinate.longitude
+        self.lblCurrentLocation.text = self.setUsersClosestLocation(mLattitude: self.mMapView.centerCoordinate.latitude, mLongitude: self.mMapView.centerCoordinate.longitude)
+        mMapView.isHidden = true
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    @objc func handleTap(gestureRecognizer: UITapGestureRecognizer) {
+        // Get the location of the tap in the mapView
+        let location = gestureRecognizer.location(in: mMapView)
+        
+        // Convert the location to map coordinates
+        let coordinate = mMapView.convert(location, toCoordinateFrom: mMapView)
+        
+        // Create an annotation
+        mMapView.removeAnnotations(mMapView.annotations)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        annotation.title = self.setUsersClosestLocation(mLattitude: mMapView.centerCoordinate.latitude, mLongitude: mMapView.centerCoordinate.longitude)
+        // Add the annotation to the map
+        mMapView.addAnnotation(annotation)
+        self.currentLat = self.mMapView.centerCoordinate.latitude
+        self.currentLong = self.mMapView.centerCoordinate.longitude
+
+        let alert = UIAlertController(title: "Alert", message: "You want select this location?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { alert in
+            self.mMapView.isHidden = true
+            self.navigationController?.navigationBar.isHidden = false
+            self.lblCurrentLocation.text = self.setUsersClosestLocation(mLattitude: self.mMapView.centerCoordinate.latitude, mLongitude: self.mMapView.centerCoordinate.longitude)
+        }))
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func setUsersClosestLocation(mLattitude: CLLocationDegrees, mLongitude: CLLocationDegrees) -> String {
+        let geoCoder = CLGeocoder()
+        let location = CLLocation(latitude: mLattitude, longitude: mLongitude)
+
+        geoCoder.reverseGeocodeLocation(location) {
+            (placemarks, error) -> Void in
+
+            if let mPlacemark = placemarks{
+                if let dict = mPlacemark[0].addressDictionary as? [String: Any]{
+                    if let Name = dict["Name"] as? String{
+                        if let City = dict["City"] as? String{
+                            self.currentLocationStr = Name + ", " + City
+                        }
+                    }
+                }
+            }
+        }
+        return currentLocationStr
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error - locationManager: \(error.localizedDescription)")
+    }
+    //MARK:- Intance Methods
+    
+    func determineCurrentLocation() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        DispatchQueue.global().async { [self] in
+            if CLLocationManager.locationServicesEnabled() {
+                locationManager.startUpdatingLocation()
+            }
+        }
+        
+    }
+    
+    func locationAuthorization(){
+        switch manager.authorizationStatus {
+        case .authorizedWhenInUse:
+            print("Authorized")
+            determineCurrentLocation()
+        case .denied:
+           break
+        case .authorizedAlways:
+            determineCurrentLocation()
+        case.notDetermined:
+            manager.requestAlwaysAuthorization()
+            manager.requestWhenInUseAuthorization()
+            sleep(2)
+            locationAuthorization()
+        default:
+            break
+        }
     }
     
 }

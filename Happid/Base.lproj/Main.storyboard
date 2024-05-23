@@ -3,6 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1288,19 +1289,45 @@
                                     <constraint firstAttribute="bottom" secondItem="zgP-52-iMx" secondAttribute="bottom" id="jYl-j9-T7y"/>
                                 </constraints>
                             </view>
+                            <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4eD-IX-sfj">
+                                <rect key="frame" x="0.0" y="50" width="375" height="728"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBJ-HJ-C9d">
+                                <rect key="frame" x="335" y="50" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Nfi-7f-rMp"/>
+                                    <constraint firstAttribute="height" constant="40" id="gcw-7K-hik"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="btnCloseMapView:" destination="e2G-TD-twQ" eventType="touchUpInside" id="Imr-Xn-Nj8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4ul-q0-vr3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="4ul-q0-vr3" firstAttribute="trailing" secondItem="4eD-IX-sfj" secondAttribute="trailing" id="5l5-4J-9OI"/>
+                            <constraint firstItem="4ul-q0-vr3" firstAttribute="bottom" secondItem="4eD-IX-sfj" secondAttribute="bottom" id="9cW-5s-fvY"/>
                             <constraint firstItem="vpW-hN-Uqu" firstAttribute="trailing" secondItem="4ul-q0-vr3" secondAttribute="trailing" id="C2e-Yw-xwS"/>
+                            <constraint firstItem="4eD-IX-sfj" firstAttribute="leading" secondItem="4ul-q0-vr3" secondAttribute="leading" id="D8Q-QQ-ICO"/>
+                            <constraint firstItem="vBJ-HJ-C9d" firstAttribute="top" secondItem="4eD-IX-sfj" secondAttribute="top" id="LeL-M0-dLB"/>
                             <constraint firstItem="vpW-hN-Uqu" firstAttribute="leading" secondItem="4ul-q0-vr3" secondAttribute="leading" id="Z4z-TW-cuM"/>
                             <constraint firstItem="vpW-hN-Uqu" firstAttribute="bottom" secondItem="4ul-q0-vr3" secondAttribute="bottom" id="clh-kJ-hpu"/>
                             <constraint firstItem="vpW-hN-Uqu" firstAttribute="top" secondItem="4ul-q0-vr3" secondAttribute="top" id="sJT-06-AlY"/>
+                            <constraint firstItem="4eD-IX-sfj" firstAttribute="top" secondItem="4ul-q0-vr3" secondAttribute="top" id="wCe-kK-EgI"/>
+                            <constraint firstItem="vBJ-HJ-C9d" firstAttribute="trailing" secondItem="4eD-IX-sfj" secondAttribute="trailing" id="zjX-ms-oY0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnSubmitView" destination="hXV-HZ-E35" id="xAA-sM-Y0d"/>
                         <outlet property="imgProfile" destination="MQf-LR-ihg" id="MUz-oW-pno"/>
+                        <outlet property="lblCurrentLocation" destination="9wW-ek-HW3" id="6ek-Xs-NcH"/>
+                        <outlet property="mMapView" destination="4eD-IX-sfj" id="SM2-Gx-T0E"/>
                         <outlet property="mainGradientView" destination="dES-sF-hM7" id="tzX-WL-VkN"/>
                         <outlet property="mainProfileView" destination="1Ll-bM-sas" id="vg3-Dk-TfM"/>
                         <outlet property="picLocationView" destination="FtM-sH-Kyo" id="jBp-jw-Xs2"/>
@@ -1323,6 +1350,7 @@
         <image name="ic_faaceBook" width="30.333333969116211" height="30.333333969116211"/>
         <image name="ic_google" width="30.333333969116211" height="32"/>
         <image name="ic_logo" width="135.66667175292969" height="136"/>
+        <image name="xmark.circle" catalog="system" width="128" height="123"/>
         <namedColor name="text_Color">
             <color red="0.037000000476837158" green="0.17700000107288361" blue="0.29600000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

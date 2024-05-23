@@ -21,20 +21,20 @@
 			</array>
 		</dict>
 	</dict>
-    <key>UIAppFonts</key>
-    <array>
-        <string>Montserrat-Bold.ttf</string>
-        <string>Montserrat-SemiBold.ttf</string>
-        <string>Montserrat-ExtraBold.ttf</string>
-        <string>Montserrat-Medium.ttf</string>
-        <string>Montserrat-Medium.ttf</string>
-        <string>Montserrat-SemiBold.ttf</string>
-    </array>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>This application requires location services</string>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>This application requires location services</string>
-    <key>UIUserInterfaceStyle</key>
-    <string>Light</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Montserrat-Bold.ttf</string>
+		<string>Montserrat-SemiBold.ttf</string>
+		<string>Montserrat-ExtraBold.ttf</string>
+		<string>Montserrat-Medium.ttf</string>
+		<string>Montserrat-Medium.ttf</string>
+		<string>Montserrat-SemiBold.ttf</string>
+	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow app to know your current locatin</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow app to always know your location</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>

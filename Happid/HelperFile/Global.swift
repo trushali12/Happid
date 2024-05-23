@@ -35,4 +35,3 @@ func openAleart(msg:  String, viewcontroller: UIViewController){
     viewcontroller.present(alert, animated: true, completion: nil)
 }
 
-
