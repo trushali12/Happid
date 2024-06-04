@@ -50,7 +50,7 @@ class VerificationViewController: UIViewController {
         txt2.delegate = self
         txt3.delegate = self
         txt4.delegate = self
-        lblPhoneNumber.text = phoneNumber
+        lblPhoneNumber.text = "\(countryCode ?? "") \(phoneNumber ?? "")"
         txt1.addTarget(self, action: #selector(setTextUI1), for: .editingChanged)
         txt2.addTarget(self, action: #selector(setTextUI2), for: .editingChanged)
         txt3.addTarget(self, action: #selector(setTextUI3), for: .editingChanged)

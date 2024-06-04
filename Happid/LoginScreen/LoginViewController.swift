@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CountryPickerView
 
 class LoginViewController: UIViewController {
     
@@ -20,6 +21,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var btnLoginWithFaceBook: UIButton!
     @IBOutlet weak var lblTermsAndPrivacy: UILabel!
     
+    @IBOutlet weak var countrypicker: CountryPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,12 @@ class LoginViewController: UIViewController {
     
     
     func setupData(){
+        countrypicker.isHidden = false
+        countrypicker.delegate = self
+        countrypicker.dataSource = self
+        countrypicker.flagImageView.isHidden = true
+        countrypicker.countryDetailsLabel.isHidden = true
+        imgCountryFlage.layer.cornerRadius = 6
         txtPhoneNumber.keyboardType = .phonePad
         btnRequestOtpView.setTitle(titleVal: "Request OTP")
         btnRequestOtpView.actionBtn.addTarget(self, action: #selector(btnGetStarted), for: .touchUpInside)
@@ -103,7 +111,15 @@ class LoginViewController: UIViewController {
     }
 
 }
+extension LoginViewController: CountryPickerViewDelegate, CountryPickerViewDataSource {
+    
+    func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: CPVCountry){
+        print(countryPickerView.countries, country)
+        lblCountryCode.text = "\(country.phoneCode)"
+        imgCountryFlage.image = country.flag
+    }
 
+}
 extension LoginViewController: UITextFieldDelegate{
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let maxLength = 10

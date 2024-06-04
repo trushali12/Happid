@@ -7,7 +7,8 @@ target 'Happid' do
   
   # Pods for Happid
   pod 'IQKeyboardManagerSwift'
-  
+  pod 'CountryPickerView'
+
   target 'HappidTests' do
     inherit! :search_paths
     # Pods for testing
